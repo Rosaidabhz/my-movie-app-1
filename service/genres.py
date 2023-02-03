@@ -14,8 +14,8 @@ class GenresService():
     
     def create_genres (self, genres: GenresModel):
         new_genres = GenresModel(
-            gen_id = gen.id,
-            gen_title = gen.title
+            gen_id = genres.gen.id,
+            gen_title = genres.gen.title
         )
         self.db.add(new_genres)
         self.db.commit()

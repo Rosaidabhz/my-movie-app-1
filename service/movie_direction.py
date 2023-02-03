@@ -1,4 +1,5 @@
-from models.movie_direction import Direction as DirectionModel 
+from models.movie_direction import Direction as DirectionModel
+from schemas.movie_direction import Movie_direction 
 
 class DirectionMovieService():
     def __init__(self,db) -> None:
@@ -10,8 +11,8 @@ class DirectionMovieService():
     
     def create_direction_movie (self, direction: DirectionModel):
         new_direction = DirectionModel(
-            dir_id = director.id,
-            mov_id = mov.id,
+            dir_id = Movie_direction.dir_id,
+            mov_id = Movie_direction.mov.id,
         )
         self.db.add(new_direction)
         self.db.commit()
