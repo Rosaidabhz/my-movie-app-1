@@ -17,4 +17,3 @@ class DirectionMovieService():
         self.db.add(new_direction)
         self.db.commit()
         return
-        
